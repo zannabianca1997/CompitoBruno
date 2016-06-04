@@ -24,7 +24,7 @@
   </head>
   <body>
   
-    <div id="general">
+    <div class="general">
         <!-- 
             To transform in a navbar
         <h1>General text...</h1>
@@ -52,35 +52,38 @@
                   <li><a href="../navbar-fixed-top/">Fixed top</a></li>
                 </ul>-->
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a onClick="openArgument('#simplicity')">Simplicity</a></li>
-                    <li><a onClick="openArgument('#velocity')">Velocity</a></li>
-                    <li><a onClick="openArgument('#multimedia')">Multimedia</a></li>
-                    <li><a onClick="openArgument('#opensorce')">Opensorce</a></li>
+                    <li><a onClick="openArgument('.simplicity')">Simplicity</a></li>
+                    <li><a onClick="openArgument('.velocity')">Velocity</a></li>
+                    <li><a onClick="openArgument('.multimedia')">Multimedia</a></li>
+                    <li><a onClick="openArgument('.opensorce')">Opensorce</a></li>
                 </ul>
               </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
         </nav>
     </div>
-    <!--start of icons-->
-    <div class="icon"><img src="./assets/Telegram_logo.png"></div>
-    <!--icons end-->
-    <div id="argument">
-        <h2>Argument general text... <br></h2>
-        <div id="simplicity">
-            Simply
+    <div class="container-fluid">
+        <div class="row"> <!--first row, icons and eventual jumbotron-->
+            <div class="col-md-12" id="iconContainer" class>
+                <!-- This div will be automatically filled with the five icons -->
+            </div>
         </div>
-        <div id="velocity">
-            Fast
+        <div class="argument"><!-- this will appear only when argument is open --> 
+            <h2>Argument general text... <br></h2>
+            <div class="simplicity">
+                Simply
+            </div>
+            <div class="velocity">
+                Fast
+            </div>
+            <div class="multimedia">
+                Send all you can think
+            </div>
+            <div class="opensorce">
+                Open source
+            </div>
+            <a onClick="openGenerals()">Back</a>
         </div>
-        <div id="multimedia">
-            Send all you can think
-        </div>
-        <div id="opensorce">
-            Open source
-        </div>
-        <a onClick="openGenerals()">Back</a>
     </div>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

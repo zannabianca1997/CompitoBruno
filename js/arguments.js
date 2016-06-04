@@ -10,15 +10,15 @@ function openArgument(argument) {
 }
 //open general elements, close argument ones
 function openGenerals() {
-    visualize("#general");
-    unvisualize("#argument");
+    visualize(".general");
+    unvisualize(".argument");
     closeArgument();
 }
     
 //close general elements, open argument ones
 function closeGenerals() {
-    unvisualize("#general");
-    visualize("#argument");
+    unvisualize(".general");
+    visualize(".argument");
 }
 
 

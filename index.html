@@ -24,16 +24,7 @@
   </head>
   <body>
   
-    <div id="general">
-        <!-- 
-            To transform in a navbar
-        <h1>General text...</h1>
-        <ol>
-            <li><a onClick="openArgument('#simplicity')">simplicity</a></li>
-            <li><a onClick="openArgument('#velocity')">velocity</a></li>
-            <li><a onClick="openArgument('#multimedia')">multimedia</a></li>
-            <li><a onClick="openArgument('#opensorce')">opensorce</a></li>
-        </ol> -->
+    <div class="general">
         <nav class="navbar navbar-default"> <!--navigation bar-->
             <div class="container-fluid">
               <div class="navbar-header">
@@ -46,38 +37,39 @@
                 <a class="navbar-brand" href="#">Telegram</a>
               </div>
               <div id="navbar" class="navbar-collapse collapse">
-                <!--<ul class="nav navbar-nav navbar-right">
-                  <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
-                  <li><a href="../navbar-static-top/">Static top</a></li>
-                  <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-                </ul>-->
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a onClick="openArgument('#simplicity')">Simplicity</a></li>
-                    <li><a onClick="openArgument('#velocity')">Velocity</a></li>
-                    <li><a onClick="openArgument('#multimedia')">Multimedia</a></li>
-                    <li><a onClick="openArgument('#opensorce')">Opensorce</a></li>
+                    <li><a onClick="openArgument('.simplicity')">Simplicity</a></li>
+                    <li><a onClick="openArgument('.velocity')">Velocity</a></li>
+                    <li><a onClick="openArgument('.multimedia')">Multimedia</a></li>
+                    <li><a onClick="openArgument('.opensorce')">Opensorce</a></li>
                 </ul>
               </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
         </nav>
     </div>
-    <div id="argument">
-        <h2>Argument general text... <br></h2>
-        <div id="simplicity">
-            Simply
+    <div class="container-fluid">
+        <div class="row"> <!--first row, icons and eventual jumbotron-->
+            <div class="col-md-12" id="iconContainer" class>
+                <!-- This div will be automatically filled with the five icons -->
+            </div>
         </div>
-        <div id="velocity">
-            Fast
+        <div class="argument"><!-- this will appear only when argument is open --> 
+            <h2>Argument general text... <br></h2>
+            <div class="simplicity">
+                Simply
+            </div>
+            <div class="velocity">
+                Fast
+            </div>
+            <div class="multimedia">
+                Send all you can think
+            </div>
+            <div class="opensorce">
+                Open source
+            </div>
+            <a onClick="openGenerals()">Back</a>
         </div>
-        <div id="multimedia">
-            Send all you can think
-        </div>
-        <div id="opensorce">
-            Open source
-        </div>
-        <a onClick="openGenerals()">Back</a>
     </div>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
