@@ -3,42 +3,32 @@ openedArgument = null;
 
 //open an argument
 function openArgument(argument) {
-    closeGenerals(); //arguments display instantly
-    closeArgument();
+    if (!openedArgument) {
+        unvisualize(".general");
+        visualize(".argument");
+    } else {
+        unvisualize(openedArgument);
+    }
     openedArgument = argument;
     visualize(openedArgument);
 }
 //open general elements, close argument ones
 function openGenerals() {
-    visualize(".general");
-    unvisualize(".argument");
-    closeArgument();
-}
-    
-//close general elements, open argument ones
-function closeGenerals() {
-    unvisualize(".general");
-    visualize(".argument");
-}
-
-
-//close current opened argument
-function closeArgument() {
-    if (openedArgument != null) {
+    if (openedArgument) {
+        visualize(".general");
+        unvisualize(".argument");
         unvisualize(openedArgument);
-        openedArgument = null; //nothing is open now
+        openedArgument = null;
     }
 }
-
-FadingTime = 1000 //un secondo
 
 //visualize class
 function visualize(className) {
     var ArgElements = document.querySelectorAll(className);
-    unfadeList(ArgElements,FadingTime);
+    unfadeList(ArgElements,TransitionTime);
 }
 //unvisualize class
 function unvisualize(className) {
     var ArgElements = document.querySelectorAll(className);
-    fadeList(ArgElements,FadingTime);
+    fadeList(ArgElements,TransitionTime);
 }

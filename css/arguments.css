@@ -10,9 +10,9 @@
 }
 
 /* All arguments classes, starting closed */
-.simplicity { display: none }
-.velocity   { display: none }
-.multimedia { display: none }
-.opensorce  { display: none }
+#simplicity { display: none }
+#velocity   { display: none }
+#multimedia { display: none }
+#opensorce  { display: none }
 
 

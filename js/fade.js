@@ -1,4 +1,3 @@
-framerate = 5
 
 //fading animations
 function fade(obj,time) {
