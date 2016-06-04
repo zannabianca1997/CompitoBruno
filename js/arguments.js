@@ -28,17 +28,18 @@ function closeArgument() {
     }
 }
 
+FadingTime = 1000 //un secondo
+
 //visualize class
 function visualize(className) {
     var ArgElements = document.querySelectorAll(className);
-    for (var i = 0; i < ArgElements.length; i++) {
+    /*for (var i = 0; i < ArgElements.length; i++) {
         ArgElements[i].style.display = 'inherit';
-    }
+    }*/
+    unfadeList(ArgElements,FadingTime);
 }
 //unvisualize class
 function unvisualize(className) {
     var ArgElements = document.querySelectorAll(className);
-    for (var i = 0; i < ArgElements.length; i++) {
-        ArgElements[i].style.display = 'none';
-    }
+    fadeList(ArgElements,FadingTime);
 }

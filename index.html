@@ -17,17 +17,17 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <!-- Css file defining arguments classes-->
+    <!-- Css file defining arguments classes start values-->
     <link href="css/arguments.css" rel="stylesheet">
   </head>
   <body>
     <div id="general">
         <h1>General text...</h1>
         <ol>
-            <li>simplicity</li>
-            <li>velocity</li>
-            <li>multimedia</li>
-            <li>opensorce</li>
+            <li><a onClick="openArgument('#simplicity')">simplicity</a></li>
+            <li><a onClick="openArgument('#velocity')">velocity</a></li>
+            <li><a onClick="openArgument('#multimedia')">multimedia</a></li>
+            <li><a onClick="openArgument('#opensorce')">opensorce</a></li>
         </ol>
     </div>
     <div id="argument">
@@ -44,12 +44,15 @@
         <div id="opensorce">
             Open source
         </div>
+        <a onClick="openGenerals()">Back</a>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/vendor/bootstrap.min.js"></script>
+    <!-- Script for fading animation -->
+    <script src="js/fade.js"></script>
     <!-- Script for the opening/closing of arguments -->
     <script src="js/arguments.js"></script>
   </body>
