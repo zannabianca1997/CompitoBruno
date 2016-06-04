@@ -5,8 +5,14 @@ openedArgument = null;
 function openArgument(argument) {
     closeGenerals(); //arguments display instantly
     closeArgument();
-    visualize(argument);
     openedArgument = argument;
+    visualize(openedArgument);
+}
+//open general elements, close argument ones
+function openGenerals() {
+    visualize("#general");
+    unvisualize("#argument");
+    closeArgument();
 }
     
 //close general elements, open argument ones
@@ -15,16 +21,12 @@ function closeGenerals() {
     visualize("#argument");
 }
 
-//close general elements, open argument ones
-function openGenerals() {
-    visualize("#general");
-    unvisualize("#argument");
-}
 
 //close current opened argument
 function closeArgument() {
-    if (openedArgument) {
+    if (openedArgument != null) {
         unvisualize(openedArgument);
+        openedArgument = null; //nothing is open now
     }
 }
 
@@ -33,9 +35,6 @@ FadingTime = 1000 //un secondo
 //visualize class
 function visualize(className) {
     var ArgElements = document.querySelectorAll(className);
-    /*for (var i = 0; i < ArgElements.length; i++) {
-        ArgElements[i].style.display = 'inherit';
-    }*/
     unfadeList(ArgElements,FadingTime);
 }
 //unvisualize class
