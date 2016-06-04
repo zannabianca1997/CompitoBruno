@@ -38,10 +38,10 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a onClick="openArgument('.simplicity')">Simplicity</a></li>
-                <li><a onClick="openArgument('.velocity')">Velocity</a></li>
-                <li><a onClick="openArgument('.multimedia')">Multimedia</a></li>
-                <li><a onClick="openArgument('.opensorce')">Opensorce</a></li>
+                <li><a onClick="openArgument('#simplicity')">Simplicity</a></li>
+                <li><a onClick="openArgument('#velocity')">Velocity</a></li>
+                <li><a onClick="openArgument('#multimedia')">Multimedia</a></li>
+                <li><a onClick="openArgument('#opensorce')">Opensorce</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -49,7 +49,7 @@
     <div class="container-fluid">
         <div class="row"> <!--first row, icons and eventual jumbotron-->
             <div class="col-md-12" id="iconContainer">
-                <!-- This div will be automatically filled with the five icons -->
+                <div class="icon
             </div>
             <div class="col-md-9 argument">
                 <!--jumbotron containing argument name -->
@@ -58,16 +58,16 @@
         <div class="row"> <!--first row, icons and eventual jumbotron-->
             <div class="col-md-12 argument"><!-- this will appear only when argument is open --> 
                 <h2>Argument general text... <br></h2>
-                <div class="simplicity">
+                <div id="simplicity">
                     Simply
                 </div>
-                <div class="velocity">
+                <div id="velocity">
                     Fast
                 </div>
-                <div class="multimedia">
+                <div id="multimedia">
                     Send all you can think
                 </div>
-                <div class="opensorce">
+                <div id="opensorce">
                     Open source
                 </div>
                 <a onClick="openGenerals()">Back</a>
@@ -80,6 +80,8 @@
     <script src="js/vendor/bootstrap.min.js"></script>
     <!-- Script for constans -->
     <script src="js/main.js"></script>
+    <!-- Script for the icons -->
+    <script src="js/icon.js"></script>
     <!-- Script for fading animation -->
     <script src="js/fade.js"></script>
     <!-- Script for the opening/closing of arguments -->

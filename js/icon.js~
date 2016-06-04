@@ -1,7 +1,4 @@
 //Icon adding, movement, positioning and resizing
-
-icons = [];
-
 function AddIcons() {
     
 }
