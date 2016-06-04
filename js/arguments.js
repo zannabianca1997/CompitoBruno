@@ -4,31 +4,20 @@ openedArgument = null;
 //open an argument
 function openArgument(argument) {
     if (!openedArgument) {
-        unvisualize(".general");
-        visualize(".argument");
+        $(".general").fadeOut(TransitionTime);
+        $(".argument").fadeIn(TransitionTime);
     } else {
-        unvisualize(openedArgument);
+        $(openedArgument).fadeOut(TransitionTime);
     }
     openedArgument = argument;
-    visualize(openedArgument);
+    $(openedArgument).fadeIn(TransitionTime);
 }
 //open general elements, close argument ones
 function openGenerals() {
     if (openedArgument) {
-        visualize(".general");
-        unvisualize(".argument");
-        unvisualize(openedArgument);
+        $(".general").fadeIn(TransitionTime);
+        $(".argument").fadeOut(TransitionTime);
+        $(openedArgument).fadeOut(TransitionTime);
         openedArgument = null;
     }
-}
-
-//visualize class
-function visualize(className) {
-    var ArgElements = document.querySelectorAll(className);
-    unfadeList(ArgElements,TransitionTime);
-}
-//unvisualize class
-function unvisualize(className) {
-    var ArgElements = document.querySelectorAll(className);
-    fadeList(ArgElements,TransitionTime);
 }

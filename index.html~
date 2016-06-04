@@ -49,7 +49,9 @@
     <div class="container-fluid">
         <div class="row"> <!--first row, icons and eventual jumbotron-->
             <div class="col-md-12" id="iconContainer">
-                <div class="icon
+                <div class="icon" id="Logo">
+                    <img src="./assets/Telegram_logo.png">
+                </div>
             </div>
             <div class="col-md-9 argument">
                 <!--jumbotron containing argument name -->

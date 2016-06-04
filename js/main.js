@@ -1,7 +1,7 @@
 //constants in the page
 
-framerate = 5
 TransitionTime = 1000 //un secondo
 
 //building the page
+icon_names = ['Logo'];
 AddIcons(); //Add icons

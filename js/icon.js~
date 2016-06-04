@@ -1,8 +1,0 @@
-//Icon adding, movement, positioning and resizing
-function AddIcons() {
-    
-}
-
-function GetIconDimension() {
-    return ($(document).width()/4 - 10);
-}
