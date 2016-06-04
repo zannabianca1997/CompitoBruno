@@ -1,9 +1,0 @@
-/* the elements with this id will 
-   be visible only when all arguments are closed*/
-#general {
-    display: inherit;
-}/* the elements with this id will 
-   be visible only when an argument is open*/
-#argument {
-    display: none;
-}

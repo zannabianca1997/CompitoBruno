@@ -19,6 +19,8 @@
     
     <!-- Css file defining arguments classes start values-->
     <link href="css/arguments.css" rel="stylesheet">
+    <!-- Css file defining icons classes -->
+    <link href="css/icon.css" rel="stylesheet">
   </head>
   <body>
   
@@ -59,6 +61,9 @@
             </div><!--/.container-fluid -->
         </nav>
     </div>
+    <!--start of icons-->
+    <div class="icon"><img src="./assets/Telegram_logo.png"></div>
+    <!--icons end-->
     <div id="argument">
         <h2>Argument general text... <br></h2>
         <div id="simplicity">

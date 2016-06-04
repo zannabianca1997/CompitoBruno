@@ -1,10 +1,12 @@
 /*icon class*/
 .icon {
-	width: 300px;
-	height: 300px;
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
+	width: 1024px;
+	height: 1024px;
+	border-radius: 512px;
+	-webkit-border-radius: 512px;
+	-moz-border-radius: 512px;
 	overflow: hidden; /*image not overflowing*/
 }
+
+
 
