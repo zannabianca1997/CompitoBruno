@@ -28,7 +28,7 @@ function SetIconPos(index,x,y){
 
 //movements
 
-var theta = Math.PI/2;
+var theta = Math.PI*(1/2-2/5);
 var radius = [Parking_radius, Parking_radius, Parking_radius, Parking_radius, Parking_radius]; //initially they are all on parking radius
 
 var fifth_of_a_turn = 2*Math.PI/5 //precalculated
@@ -42,4 +42,6 @@ function refreshIcons() {
         SetIconPos(i, iconRadius*Math.cos(iconTheta), iconRadius*Math.sin(iconTheta))
     }
 }
+
+
 
