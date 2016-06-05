@@ -15,22 +15,31 @@ function ScaleIcons() {
 }
 
 function GetIconDimension() {
-    return ($(document).width()/4 * 3/4 ); //3 colums , 3 quarter of that
-}
-
-function SetIconStartPos() {
-    SetIconPos(0,0,0);
-    SetIconPos(1,100,100);
-    SetIconPos(2,-100,100);
-    SetIconPos(3,100,-100);
-    SetIconPos(4,-100,-100);
+    return ($(window).width()/4 * 3/4 ); //3 colums , 3 quarter of that
 }
 
 //set the icon position in relation to
 function SetIconPos(index,x,y){
     $(".icon:eq("+index+")").css({
         'left': ($('#iconContainer').width()/2+x)+"px",
-        "top": ($('#iconContainer').height()/2+y)+"px"
+        "top": ($('#iconContainer').height()/2-y)+"px"
     });
+}
+
+//movements
+
+var theta = Math.PI/2;
+var radius = [Parking_radius, Parking_radius, Parking_radius, Parking_radius, Parking_radius]; //initially they are all on parking radius
+
+var fifth_of_a_turn = 2*Math.PI/5 //precalculated
+
+function refreshIcons() {
+    //radius just outside the windows
+    var maxRadius = Math.sqrt(Math.pow($(window).width(),2)+Math.pow($(window).height(),2)) + GetIconDimension()/2;
+    for(var i=0; i<5; i++) {
+        var iconRadius = radius[i]*maxRadius;
+        var iconTheta = theta + fifth_of_a_turn*i;
+        SetIconPos(i, iconRadius*Math.cos(iconTheta), iconRadius*Math.sin(iconTheta))
+    }
 }
 

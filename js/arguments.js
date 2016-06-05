@@ -1,12 +1,21 @@
 //current opened argument
-openedArgument = null;
+var openedArgument = null;
 
 //open an argument
 function openArgument(argument) {
     if (!openedArgument) {
         $(".general").stop().fadeOut(TransitionTime);
         $("#NavBar").stop().slideDown(TransitionTime);
-        $('#iconContainer').attr('class', 'col-md-3').css('height',GetIconDimension()*4/3+'px');
+        $('#iconContainer').stop().animate(
+            {
+                'height':GetIconDimension()*4/3+'px',
+                'width':$(window).width()/4 //3 colonne
+            }
+            ,TransitionTime,
+            function () {
+                $('#iconContainer').attr('class', 'col-md-3')
+            }
+        );
         setTimeout(function(){
             $(argument).stop().fadeIn(TransitionTime);
             $(".argument").stop().fadeIn(TransitionTime);
@@ -25,7 +34,16 @@ function openGenerals() {
         $(".argument").stop().fadeOut(TransitionTime);
         $(openedArgument).stop().fadeOut(TransitionTime);
         $("#NavBar").stop().slideUp(TransitionTime);
-        $('#iconContainer').attr('class', 'col-md-12').css('height',$('body').height());
+        $('#iconContainer').stop().animate(
+            {
+                'height':$(window).height(),
+                'width':$(window).width() //3 colonne
+            }
+            ,TransitionTime,
+            function () {
+                $('#iconContainer').attr('class', 'col-md-12')
+            }
+        );
         openedArgument = null;
     }
 }
