@@ -7,16 +7,7 @@ function openArgument(argument) {
         if (!openedArgument) {
             $(".general").stop().fadeOut(TransitionTime);
             $("#NavBar").stop().slideDown(TransitionTime);
-            $('#iconContainer').stop().animate(
-                {
-                    'height':GetIconDimension()*4/3+'px',
-                    'width':$(window).width()/4 //3 colonne
-                }
-                ,TransitionTime,
-                function () {
-                    $('#iconContainer').attr('class', 'col-md-3')
-                }
-            );
+            shrinkiconContainer();
             setTimeout(function(){
                 $(argument).stop().fadeIn(TransitionTime);
                 $(".argument").stop().fadeIn(TransitionTime);
@@ -27,7 +18,6 @@ function openArgument(argument) {
             });
         }
         openedArgument = argument;
-        refreshIcons();
     }
 }
 //open general elements, close argument ones
@@ -37,30 +27,44 @@ function openGenerals() {
         $(".argument").stop().fadeOut(TransitionTime);
         $(openedArgument).stop().fadeOut(TransitionTime);
         $("#NavBar").stop().slideUp(TransitionTime);
-        $('#iconContainer').stop().animate(
-            {
-                'height':$(window).height(),
-                'width':$(window).width() //3 colonne
-            }
-            ,TransitionTime,
-            function () {
-                $('#iconContainer').attr('class', 'col-md-12')
-            }
-        );
+        enlargeiconContainer()
         openedArgument = null;
-        refreshIcons();
     }
 }
 
-//when a icon is pressed
-function iconclick(argument) {
-    targetheta = Math.PI/2 - fifth_of_a_turn*icon_names[argument]
-    WakeUpIcons();
-    if (argument == 'Logo'){
-        openGenerals(); 
-    } else if(argument != openedArgument){
-        openArgument(argument); //worse code ever
-    } else {
-        openGenerals(); 
-    }
+function shrinkiconContainer() {
+    $('#iconContainer').stop().animate(
+        {
+            'height':GetIconDimension()*4/3+'px',
+            'width':$(window).width()/4 //3 colonne
+        }
+        ,TransitionTime,
+        function () {
+            $('#iconContainer').attr('class', 'col-md-3')
+        }
+    );
+    KeepIconInPlace();
+}
+
+function enlargeiconContainer() {
+    $('#iconContainer').stop().animate(
+        {
+            'height':$(window).height(),
+            'width':$(window).width() //3 colonne
+        }
+        ,TransitionTime,
+        function () {
+            $('#iconContainer').attr('class', 'col-md-12')
+        }
+    );
+    KeepIconInPlace();
+}
+
+function KeepIconInPlace() {
+    var clock = TransitionTime
+    var iconcheck = setInterval(function(){
+        refreshIcons();
+        clock -= framerate;
+        if ( clock < 0 ) {clearInterval(iconcheck);}
+     }, framerate);
 }

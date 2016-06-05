@@ -1,5 +1,17 @@
 //Icon adding, movement, positioning and resizing
 
+//when a icon is pressed
+function iconclick(argument) {
+    targetheta = Math.PI/2 - fifth_of_a_turn*icon_names[argument]
+    WakeUpIcons();
+    if (argument == 'Logo'){
+        openGenerals(); 
+    } else if(argument != openedArgument){
+        openArgument(argument); //worse code ever
+    } else {
+        openGenerals(); 
+    }
+}
 
 function ScaleIcons() {
     iconDimension = GetIconDimension()

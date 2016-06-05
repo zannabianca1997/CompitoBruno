@@ -7,6 +7,8 @@
 	
 	position:absolute;
 	transform: translate(-50%,-50%);/*Centered*/
+	
+	z-index: 1; /*Always on top*/
 }
 
 /*image in the top-left corner*/
