@@ -2,8 +2,7 @@
 
 //when a icon is pressed
 function iconclick(argument) {
-    targetheta = Math.PI/2 - fifth_of_a_turn*icon_names[argument]
-    WakeUpIcons();
+    SetTargetheta(Math.PI*2 - fifth_of_a_turn*icon_names[argument]);
     if (argument == 'Logo'){
         openGenerals(); 
     } else if(argument != openedArgument){
@@ -40,18 +39,19 @@ function SetIconPos(index,x,y){
 
 //movements
 
-var theta = Math.PI/2;
+var theta = 0;
 var radius = [Parking_radius, Parking_radius, Parking_radius, Parking_radius, Parking_radius]; //initially they are all on parking radius
 
 var fifth_of_a_turn = 2*Math.PI/5 //precalculated
 
+var maxRadius = Math.sqrt(Math.pow($(window).width(),2)+Math.pow($(window).height(),2)) + GetIconDimension()/2;
+
 function refreshIcons() {
     //radius just outside the windows
-    var maxRadius = Math.sqrt(Math.pow($(window).width(),2)+Math.pow($(window).height(),2)) + GetIconDimension()/2;
     for(var i=0; i<5; i++) {
         var iconRadius = radius[i]*maxRadius;
         var iconTheta = theta + fifth_of_a_turn*i;
-        SetIconPos(i, iconRadius*Math.cos(iconTheta), iconRadius*Math.sin(iconTheta))
+        SetIconPos(i, -iconRadius*Math.sin(iconTheta), iconRadius*Math.cos(iconTheta))
     }
 }
 
