@@ -1,9 +1,9 @@
 //constants in the page
 
-TransitionTime = 1000 //un secondo
+TransitionTime = 500 //un secondo
 
 //1 is just outside the page
-Parking_radius = 0.15
+Parking_radius = [0.07,0.15,0.12,0.12,0.15]
 framerate = 5 //frame ogni 5 millisecondi
 //speeds of rotations and movements
 //    they are deltas: multiplied for framerate

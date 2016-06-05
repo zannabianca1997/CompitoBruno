@@ -4,3 +4,29 @@ body, html {
     width: 100%;
 }
 
+body {
+    background-color: #9bd5f0;
+}
+
+/*Navbar, starting closed*/
+#NavBar { 
+    display: none;
+}
+
+/*jumbotrons*/
+.jumbotron h2{
+    text-align: center;
+}
+
+.jumbotron p{
+    text-align: center;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+

@@ -1,6 +1,8 @@
 //current opened argument
 var openedArgument = null;
 
+var arguments_name = [".simplicity",".velocity",".multimedia",".opensorce"]
+
 //open an argument
 function openArgument(argument) {
     if (argument != openedArgument) {
@@ -33,16 +35,24 @@ function openGenerals() {
         enlargeiconContainer()
         openedArgument = null;
         
-        targetradius = [Parking_radius, Parking_radius, Parking_radius, Parking_radius, Parking_radius];//ritornare in parcheggio
+        targetradius = Parking_radius;//ritornare in parcheggio
         SetTargetheta(0);
+    } else {
+        
+        openArgument(arguments_name[Math.floor(Math.random()*4)])
     }
 }
 
 function shrinkiconContainer() {
+    var targetWidth = $(window).width();
+    if ($(window).width() > 991) { 
+        targetWidth = $(window).width()/4; //piccoli device //3 colonne
+    }
+
     $('#iconContainer').stop().animate(
         {
-            'height':GetIconDimension()*4/3+'px',
-            'width':$(window).width()/4 //3 colonne
+            'height': GetIconDimension()*4/3+'px',
+            'width': targetWidth
         }
         ,TransitionTime,
         function () {
