@@ -6,6 +6,7 @@ function openArgument(argument) {
     if (!openedArgument) {
         $(".general").fadeOut(TransitionTime);
         $(".argument").fadeIn(TransitionTime);
+        $("#NavBar").slideDown(TransitionTime);
     } else {
         $(openedArgument).fadeOut(TransitionTime);
     }
@@ -18,6 +19,7 @@ function openGenerals() {
         $(".general").fadeIn(TransitionTime);
         $(".argument").fadeOut(TransitionTime);
         $(openedArgument).fadeOut(TransitionTime);
+        $("#NavBar").slideUp(TransitionTime);
         openedArgument = null;
     }
 }

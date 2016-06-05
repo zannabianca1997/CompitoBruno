@@ -8,6 +8,13 @@
 	overflow: hidden; /*image not overflowing*/
 }
 
+/*image in the top-left corner*/
+.icon img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
 /*contains the icons and define the space in which they will move*/
 #iconContainer {
 }

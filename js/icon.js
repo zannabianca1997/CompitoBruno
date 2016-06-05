@@ -3,11 +3,14 @@
 var icons=[];
 
 function AddIcons() {
-    for (var i = 0; i < icon_names.length; i++) {
-        icons[i] = $("#"+icon_names[i]);
-        
-        document.write(icon_names[i]);
-    }
+    iconDimension = GetIconDimension()
+    icons = $(".icon").toArray();
+    document.write("" + iconDimension +", <br>"+ icons + "<br>")
+    $(".icon>img").each(function (index) { 
+        $(this).css('transform-origin','top left')
+               .css('transform','scale(' + iconDimension/$(this).width() + ',' + iconDimension/$(this).height() + ')');
+        document.write("" + $(this).width() + ", " + $(this).height() + "  -  ")
+    });
 }
 
 function GetIconDimension() {

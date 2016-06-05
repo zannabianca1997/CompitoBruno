@@ -49,8 +49,20 @@
     <div class="container-fluid">
         <div class="row"> <!--first row, icons and eventual jumbotron-->
             <div class="col-md-12" id="iconContainer">
-                <div class="icon" id="Logo">
+                <div class="icon" id="Logo" onClick="openGenerals()">
                     <img src="./assets/Telegram_logo.png">
+                </div>
+                <div class="icon" id="iconsimplicity" onClick="openArgument('#simplicity')">
+                    <img src="./assets/simplicity.png">
+                </div>
+                <div class="icon" id="iconvelocity" onClick="openArgument('#velocity')">
+                    <img src="./assets/velocity.png">
+                </div>
+                <div class="icon" id="iconmultimedia" onClick="openArgument('#multimedia')">
+                    <img src="./assets/multimedia.png">
+                </div>
+                <div class="icon" id="iconopensorce" onClick="openArgument('#opensorce')">
+                    <img src="./assets/opensorce.png">
                 </div>
             </div>
             <div class="col-md-9 argument">
@@ -78,13 +90,17 @@
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- jQuery Transform Library (for icon moving, cross-browser) -->
+    <script src="js/vendor/jquery.transform2d.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/vendor/bootstrap.min.js"></script>
     <!-- Script for constans -->
-    <script src="js/main.js"></script>
+    <script src="js/consts.js"></script>
     <!-- Script for the icons -->
     <script src="js/icon.js"></script>
     <!-- Script for the opening/closing of arguments -->
     <script src="js/arguments.js"></script>
+    <!-- Main script for animation and stuff -->
+    <script src="js/main.js"></script>
   </body>
 </html>

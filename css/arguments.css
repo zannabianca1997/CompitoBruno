@@ -15,4 +15,7 @@
 #multimedia { display: none }
 #opensorce  { display: none }
 
+/*Navbar, starting closed*/
+#NavBar { display: none }
+
 
