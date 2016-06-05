@@ -11,6 +11,11 @@ $('#iconContainer').css('height',$('body').height())
 //create the icons
 ScaleIcons(); //Scale icons
 //resizing
-$(window).resize(function(){
+$(window).resize(function(){ //resizing of windows
     ScaleIcons();
+    if(openedArgument) {
+        $('#iconContainer').attr('class', 'col-md-3').css('height',GetIconDimension()*4/3+'px');
+    } else {
+        $('#iconContainer').css('height',$('body').height())
+    }
 }); 
