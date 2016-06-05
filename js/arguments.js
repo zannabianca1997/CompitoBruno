@@ -40,7 +40,7 @@ function shrinkiconContainer() {
         }
         ,TransitionTime,
         function () {
-            $('#iconContainer').attr('class', 'col-md-3')
+            $('#iconContainer').css('width',"").attr('class', 'col-md-3')
         }
     );
     KeepIconInPlace();
@@ -54,7 +54,7 @@ function enlargeiconContainer() {
         }
         ,TransitionTime,
         function () {
-            $('#iconContainer').attr('class', 'col-md-12')
+            $('#iconContainer').css('width',"").attr('class', 'col-md-12')
         }
     );
     KeepIconInPlace();

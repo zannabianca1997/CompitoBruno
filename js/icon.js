@@ -2,13 +2,13 @@
 
 //when a icon is pressed
 function iconclick(argument) {
-    SetTargetheta(Math.PI*2 - fifth_of_a_turn*icon_names[argument]);
     if (argument == 'Logo'){
-        openGenerals(); 
+        openGenerals(); SetTargetheta(0);
     } else if(argument != openedArgument){
         openArgument(argument); //worse code ever
+        SetTargetheta(Math.PI*2 - fifth_of_a_turn*icon_names[argument]);
     } else {
-        openGenerals(); 
+        openGenerals(); SetTargetheta(0);
     }
 }
 

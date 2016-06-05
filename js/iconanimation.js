@@ -1,6 +1,6 @@
 //icon animation
 
-var targetheta = Math.PI/2;
+var targetheta = 0;
 var targetradius = [Parking_radius, Parking_radius, Parking_radius, Parking_radius, Parking_radius]; //initially they are all on parking radius
 
 var IconsAnimated = false;
