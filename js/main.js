@@ -1,2 +1,6 @@
+
+//open up container
+$('#iconContainer').css('height',$('body').height())
+
 //create the icons
-AddIcons(); //Add icons
+ScaleIcons(); //Scale icons

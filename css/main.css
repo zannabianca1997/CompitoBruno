@@ -1,4 +1,9 @@
 /*main css file*/
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
 
 /*--debug --*/
 #iconContainer {

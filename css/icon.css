@@ -3,9 +3,12 @@
 	width: 200px;
 	height: 200px;
 	border-radius: 100px;
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
 	overflow: hidden; /*image not overflowing*/
+	
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
 }
 
 /*image in the top-left corner*/
