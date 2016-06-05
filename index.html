@@ -38,10 +38,10 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a onClick="openArgument('#simplicity')">Simplicity</a></li>
-                <li><a onClick="openArgument('#velocity')">Velocity</a></li>
-                <li><a onClick="openArgument('#multimedia')">Multimedia</a></li>
-                <li><a onClick="openArgument('#opensorce')">Opensorce</a></li>
+                <li><a onClick="openArgument('.simplicity')">Simplicity</a></li>
+                <li><a onClick="openArgument('.velocity')">Velocity</a></li>
+                <li><a onClick="openArgument('.multimedia')">Multimedia</a></li>
+                <li><a onClick="openArgument('.opensorce')">Opensorce</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -52,39 +52,54 @@
                 <div class="icon" id="Logo" onClick="openGenerals()">
                     <img src="./assets/Telegram_logo.png">
                 </div>
-                <div class="icon" id="iconsimplicity" onClick="openArgument('#simplicity')">
+                <div class="icon" id="iconsimplicity" onClick="openArgument('.simplicity')">
                     <img src="./assets/simplicity.png">
                 </div>
-                <div class="icon" id="iconvelocity" onClick="openArgument('#velocity')">
+                <div class="icon" id="iconvelocity" onClick="openArgument('.velocity')">
                     <img src="./assets/velocity.png">
                 </div>
-                <div class="icon" id="iconmultimedia" onClick="openArgument('#multimedia')">
+                <div class="icon" id="iconmultimedia" onClick="openArgument('.multimedia')">
                     <img src="./assets/multimedia.png">
                 </div>
-                <div class="icon" id="iconopensorce" onClick="openArgument('#opensorce')">
+                <div class="icon" id="iconopensorce" onClick="openArgument('.opensorce')">
                     <img src="./assets/opensorce.png">
                 </div>
             </div>
             <div class="col-md-9 argument">
                 <!--jumbotron containing argument name -->
+                <div class="simplicity">
+                    <h2>Simply</h2>
+                </div>
+                <div class="velocity">
+                    <h2>Fast</h2>
+                </div>
+                <div class="multimedia">
+                    <h2>Send all you can think</h2>
+                </div>
+                <div class="opensorce">
+                    <h2>Open source</h2>
+                </div>
             </div> 
         </div>
         <div class="row"> <!--first row, icons and eventual jumbotron-->
             <div class="col-md-12 argument"><!-- this will appear only when argument is open --> 
                 <h2>Argument general text... <br></h2>
-                <div id="simplicity">
-                    Simply
+                <div class="simplicity">
+                    Simply<br>
+                    <a onClick="openGenerals()">Back</a>
                 </div>
-                <div id="velocity">
-                    Fast
+                <div class="velocity">
+                    Fast<br>
+                    <a onClick="openGenerals()">Back</a>
                 </div>
-                <div id="multimedia">
-                    Send all you can think
+                <div class="multimedia">
+                    Send all you can think<br>
+                    <a onClick="openGenerals()">Back</a>
                 </div>
-                <div id="opensorce">
-                    Open source
+                <div class="opensorce">
+                    Open source<br>
+                    <a onClick="openGenerals()">Back</a>
                 </div>
-                <a onClick="openGenerals()">Back</a>
             </div>
         </div>
     </div>

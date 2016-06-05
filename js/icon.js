@@ -8,8 +8,13 @@ function ScaleIcons() {
         $(this).css('transform-origin','top left')
                .css('transform','scale(' + iconDimension/$(this).width() + ',' + iconDimension/$(this).height() + ')');
     });
+    icons.css({
+	    'width': iconDimension+'px',
+	    'height': iconDimension+'px',
+	    'border-radius': iconDimension/2+'px'
+	}) //arrotondo le icone
 }
 
 function GetIconDimension() {
-    return ($(document).width()/4 - 10);
+    return ($(document).width()/4 * 3/4 ); //3 colums , 3 quarter of that
 }

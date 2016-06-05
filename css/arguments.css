@@ -7,13 +7,14 @@
    be visible only when an argument is open*/
 .argument {
     display: none;
+    position: relative;
 }
 
 /* All arguments classes, starting closed */
-#simplicity { display: none }
-#velocity   { display: none }
-#multimedia { display: none }
-#opensorce  { display: none }
+.argument .simplicity { position:absolute; display: none }
+.argument .velocity   { position:absolute; display: none }
+.argument .multimedia { position:absolute; display: none }
+.argument .opensorce  { position:absolute; display: none }
 
 /*Navbar, starting closed*/
 #NavBar { display: none }
