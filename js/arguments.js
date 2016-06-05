@@ -29,3 +29,12 @@ function openGenerals() {
         openedArgument = null;
     }
 }
+
+//when a icon is pressed
+function iconclick(argument) {
+    if(argument != openedArgument) {
+        openArgument(argument);
+    } else {
+        openGenerals() 
+    }
+}

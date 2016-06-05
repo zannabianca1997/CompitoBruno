@@ -18,3 +18,7 @@ function ScaleIcons() {
 function GetIconDimension() {
     return ($(document).width()/4 * 3/4 ); //3 colums , 3 quarter of that
 }
+
+//set the icon position in relation to
+function SetIconPos(x,y){}
+
