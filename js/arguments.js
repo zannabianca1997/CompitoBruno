@@ -4,26 +4,27 @@ openedArgument = null;
 //open an argument
 function openArgument(argument) {
     if (!openedArgument) {
-        $(".general").fadeOut(TransitionTime);
-        $("#NavBar").slideDown(TransitionTime);
+        $(".general").stop().fadeOut(TransitionTime);
+        $("#NavBar").stop().slideDown(TransitionTime);
         $('#iconContainer').attr('class', 'col-md-3').css('height',GetIconDimension()*4/3+'px');
         setTimeout(function(){
-            $(argument).fadeIn(TransitionTime);
-            $(".argument").fadeIn(TransitionTime);
+            $(argument).stop().fadeIn(TransitionTime);
+            $(".argument").stop().fadeIn(TransitionTime);
         }, TransitionTime) //arrivano finita la transizione
     } else {
-        $(openedArgument).fadeOut(TransitionTime);
-        $(argument).fadeIn(TransitionTime);
+        $(openedArgument).stop().fadeOut(TransitionTime/2,function(){
+            $(argument).stop().fadeIn(TransitionTime/2); //substituting goes duble speed
+        });
     }
     openedArgument = argument;
 }
 //open general elements, close argument ones
 function openGenerals() {
     if (openedArgument) {
-        $(".general").fadeIn(TransitionTime);
-        $(".argument").fadeOut(TransitionTime);
-        $(openedArgument).fadeOut(TransitionTime);
-        $("#NavBar").slideUp(TransitionTime);
+        $(".general").stop().fadeIn(TransitionTime);
+        $(".argument").stop().fadeOut(TransitionTime);
+        $(openedArgument).stop().fadeOut(TransitionTime);
+        $("#NavBar").stop().slideUp(TransitionTime);
         $('#iconContainer').attr('class', 'col-md-12').css('height',$('body').height());
         openedArgument = null;
     }
