@@ -10,6 +10,7 @@ $('#iconContainer').css({
 $('#iconContainer').css('height',$('body').height())
 //create the icons
 ScaleIcons(); //Scale icons
+SetIconStartPos();
 //resizing
 $(window).resize(function(){ //resizing of windows
     ScaleIcons();
@@ -17,5 +18,6 @@ $(window).resize(function(){ //resizing of windows
         $('#iconContainer').attr('class', 'col-md-3').css('height',GetIconDimension()*4/3+'px');
     } else {
         $('#iconContainer').css('height',$('body').height())
+        SetIconStartPos();
     }
 }); 

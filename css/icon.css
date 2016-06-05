@@ -6,9 +6,7 @@
 	overflow: hidden; /*image not overflowing*/
 	
 	position:absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);/*Centered*/
 }
 
 /*image in the top-left corner*/
