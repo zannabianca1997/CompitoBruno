@@ -2,13 +2,13 @@
 
 //when a icon is pressed
 function iconclick(argument) {
+    //worse code ever
     if (argument == 'Logo'){
-        openGenerals(); SetTargetheta(0);
+        openGenerals();
     } else if(argument != openedArgument){
-        openArgument(argument); //worse code ever
-        SetTargetheta(Math.PI*2 - fifth_of_a_turn*icon_names[argument]);
+        openArgument(argument); 
     } else {
-        openGenerals(); SetTargetheta(0);
+        openGenerals();
     }
 }
 
@@ -40,7 +40,7 @@ function SetIconPos(index,x,y){
 //movements
 
 var theta = 0;
-var radius = [Parking_radius, Parking_radius, Parking_radius, Parking_radius, Parking_radius]; //initially they are all on parking radius
+var radius = [1,1,1,1,1]; //initially they are all away
 
 var fifth_of_a_turn = 2*Math.PI/5 //precalculated
 
@@ -49,9 +49,14 @@ var maxRadius = Math.sqrt(Math.pow($(window).width(),2)+Math.pow($(window).heigh
 function refreshIcons() {
     //radius just outside the windows
     for(var i=0; i<5; i++) {
-        var iconRadius = radius[i]*maxRadius;
-        var iconTheta = theta + fifth_of_a_turn*i;
-        SetIconPos(i, -iconRadius*Math.sin(iconTheta), iconRadius*Math.cos(iconTheta))
+        if(radius[i] != 1) {
+            var iconRadius = radius[i]*maxRadius;
+            var iconTheta = theta + fifth_of_a_turn*i;
+            SetIconPos(i, -iconRadius*Math.sin(iconTheta), iconRadius*Math.cos(iconTheta))
+            $(".icon:eq("+i+")").css("display","block") //visible, è dentro
+        } else {
+            $(".icon:eq("+i+")").css("display","none") //invisible, è fuori
+        }
     }
 }
 

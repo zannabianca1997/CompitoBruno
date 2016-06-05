@@ -20,6 +20,7 @@
 
 /*contains the icons and define the space in which they will move*/
 #iconContainer {
+  overflow: visible !important; /*sigh... no other way*/
 }
 
 

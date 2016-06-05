@@ -18,6 +18,9 @@ function openArgument(argument) {
             });
         }
         openedArgument = argument;
+        
+        targetradius = [1,1,1,1,1]; targetradius[icon_names[argument]] = 0; //tutti fuori a parte lei
+        SetTargetheta(Math.PI*2 - fifth_of_a_turn*icon_names[argument]);
     }
 }
 //open general elements, close argument ones
@@ -29,6 +32,9 @@ function openGenerals() {
         $("#NavBar").stop().slideUp(TransitionTime);
         enlargeiconContainer()
         openedArgument = null;
+        
+        targetradius = [Parking_radius, Parking_radius, Parking_radius, Parking_radius, Parking_radius];//ritornare in parcheggio
+        SetTargetheta(0);
     }
 }
 
@@ -40,7 +46,7 @@ function shrinkiconContainer() {
         }
         ,TransitionTime,
         function () {
-            $('#iconContainer').css('width',"").attr('class', 'col-md-3')
+            $('#iconContainer').css('width',"").attr('class', 'col-md-3') //lascio di nuovo il controllo a bootstrap
         }
     );
     KeepIconInPlace();
@@ -54,12 +60,13 @@ function enlargeiconContainer() {
         }
         ,TransitionTime,
         function () {
-            $('#iconContainer').css('width',"").attr('class', 'col-md-12')
+            $('#iconContainer').css('width',"").attr('class', 'col-md-12')//lascio di nuovo il controllo a bootstrap
         }
     );
     KeepIconInPlace();
 }
 
+//per una transizione contimua a refresharle
 function KeepIconInPlace() {
     var clock = TransitionTime
     var iconcheck = setInterval(function(){

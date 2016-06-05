@@ -4,11 +4,3 @@ body, html {
     width: 100%;
 }
 
-
-/*--debug --*/
-#iconContainer {
-    background-color: yellow;
-}
-.icon {
-    background-color: red;
-}

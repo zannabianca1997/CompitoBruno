@@ -7,8 +7,8 @@ Parking_radius = 0.15
 framerate = 5 //frame ogni 5 millisecondi
 //speeds of rotations and movements
 //    they are deltas: multiplied for framerate
-thetaspeed = framerate * 2*Math.PI/TransitionTime //un giro per transizione
-radiusspeed = framerate * 1/TransitionTime //da fuori al centro in una transizione
+thetaspeed = framerate * 0.5*Math.PI/TransitionTime //mezzo giro per transizione
+radiusspeed = framerate * 0.5/TransitionTime //da fuori al centro in mezza transizione
  
 
 
