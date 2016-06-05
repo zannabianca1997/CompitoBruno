@@ -6,12 +6,10 @@
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
 	overflow: hidden; /*image not overflowing*/
-    background-color: red;
 }
 
 /*contains the icons and define the space in which they will move*/
 #iconContainer {
-    background-color: yellow;
 }
 
 
