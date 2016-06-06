@@ -22,4 +22,7 @@ body {
     text-align: center;
 }
 
-
+/*collapse button*/
+#black_text {
+    color:black;
+}
