@@ -23,6 +23,6 @@ body {
 }
 
 /*collapse button*/
-#black_text {
-    color:black;
+.icon_bar {
+    background-color:black;
 }
